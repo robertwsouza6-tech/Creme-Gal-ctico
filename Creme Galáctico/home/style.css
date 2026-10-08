@@ -4,8 +4,34 @@
     box-sizing: border-box;
 }
 
+header {
+    background-color: #15102F;
+    padding: 26p 48px;
+}
+
+.header_container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 18 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_nav ul {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 26px 5vw;
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+
 .menu {
-    background-image: url(../img/ioff4.jpg);
+    background-image: url(../img/Panorama\ Cósmico\ em\ Azul\ Profundo.png);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
@@ -28,11 +54,24 @@
 .menu_hero p {
     font-family: 'DM Sans', Arial, sans-serif;
     color: #FFFFFF9E;
- }
+}
 
 .menu_hero,
 .menu_hero h2,
 .menu_hero span {
     display: inline-block;
     cursor: text;
+}
+
+.card_produto {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card_image {
+    width: 400px;
+    /* Aumenta a largura */
+    height: 500px;
+    /* Aumenta a altura */
 }
