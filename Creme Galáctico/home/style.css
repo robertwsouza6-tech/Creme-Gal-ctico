@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    background-image: url(../img/ioff4.jpg);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.menu_hero h2 {
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: #6943A1;
+}
+
+.menu_hero h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: #F8F3E7;
+}
+
+.menu_hero span {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #6943A1;
+}
+
+.menu_hero p {
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: #FFFFFF9E;
+ }
+
+.menu_hero,
+.menu_hero h2,
+.menu_hero span {
+    display: inline-block;
+    cursor: text;
+}
