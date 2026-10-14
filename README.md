@@ -1,1 +1,1 @@
-# Creme-Gal-ctico
+# Creme-Galáctico
