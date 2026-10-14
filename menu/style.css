@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +10,7 @@
   --secudary-color: #6943A1;
   --secundary-color: #D7FF62;
   --tertiary-color: #FFFFFFB3;
+  --font-family: font-family: "DM Sans", sans-serif;
 }
 
 body {
@@ -57,6 +60,15 @@ header {
 
 .menu_container {
   padding: 80px 0;
+}
+
+.menu_hero {
+  
+}
+
+.menu_hero span {
+  font-family: "DM Sans", sans-serif;
+  color: var(--secundary-color);
 }
 
 .card_container {
@@ -110,7 +122,7 @@ header {
 
 .card:hover {
   background: rgba(255,255,255,0.07);
-  border-color: #6d5bd0;
+  border-color: var(--secundary-color);
   transform: translateY(-4px);
 }
 
@@ -121,8 +133,14 @@ header {
   margin-bottom: 14px;
 }
 
-.card h3 { color: #fff; font-size: 15px; font-weight: 600; margin-bottom: 4px; }
-.card p { color: #9a8fbd; font-size: 12px; margin-bottom: 14px; }
+.card h3 { color: #fff; font-size: 15px; 
+  font-weight: 600; 
+  margin-bottom: 4px; 
+}
+.card p { color: #9a8fbd; 
+  font-size: 12px; 
+  margin-bottom: 14px; 
+}
 
 .card_price {
   display: flex;
@@ -144,16 +162,40 @@ header {
   font-weight: 700;
   cursor: pointer;
 }
-/* RESPONSIVO */
-@media (max-width: 1024px) {
-  .cards { grid-template-columns: repeat(2, 1fr); }
+
+footer {
+  width: 100%;
+  background-color: var(--primary-color);
 }
-@media (max-width: 768px) {
+
+.footer_container {
+  font-size: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1.2fr 1fr auto auto;
+  gap: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 42px 6vw;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+}
+
+.footer_container p {
+  font-family: "DM Sans", sans-serif;
+  color: var(--tertiary-color)
+}
+
+@media (max-width: 900px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
   .header_container {
     flex-direction: column;
     text-align: center;
-  }
 }
-@media (max-width: 512px) {
+}
+@media (max-width: 600px) {
   .cards { grid-template-columns: 1fr; }
 }
