@@ -175,10 +175,9 @@ header {
 }
 
 .card:hover .card_bg_img {
-  transform: scale(1.05); /* Efeito suave de zoom na imagem ao passar o mouse */
+  transform: scale(1.05);
 }
 
-/* Camada escura degradê para dar leitura aos textos */
 .card_overlay {
   position: absolute;
   top: 0;
@@ -194,20 +193,6 @@ header {
   z-index: 2;
 }
 
-/* Badge topo */
-.badge {
-  position: relative;
-  z-index: 3;
-  align-self: flex-start;
-  background-color: var(--accent-color);
-  color: #12102a;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 20px;
-}
-
-/* Conteúdo de Texto Inferior */
 .card_content {
   position: relative;
   z-index: 3;
@@ -277,7 +262,6 @@ footer {
   color: var(--tertiary-color);
 }
 
-/* Responsividade */
 @media (max-width: 900px) {
   .cards { 
     grid-template-columns: repeat(2, 1fr); 
