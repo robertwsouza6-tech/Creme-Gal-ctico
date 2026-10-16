@@ -21,8 +21,6 @@ body {
     background-size: cover;
     background-attachment: fixed;
     min-height: 100vh;
-    font-family: var(--font-family);
-    color: #fff;
 }
 
 header {
@@ -39,38 +37,53 @@ header {
   margin: 0 auto;
   padding: 26px 5vw;
   width: 100%; 
+  overflow: hidden;
 }
 
 .logo {
   display: block;      
   width: auto;           
   height: 40px;         
-  max-width: 100%;       
+  max-width: 120px;   
   object-fit: contain; 
+  flex-shrink: 0;
 }
 
-.header_nav ul,
-.footer_nav ul {
-  gap: clamp(24px, 3vw, 52px);
+.header_nav ul {
   display: flex;
+  gap: clamp(24px, 3vw, 52px);
   list-style: none;
 }
 
-.header_nav a,
-.footer_nav a {
+.header_nav a {
   color: var(--tertiary-color);
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-decoration: none;
   font-size: 13px;
   font-weight: 400;
   transition: color .2s ease;
 }
 
-.header_nav a:hover,
-.footer_nav a:hover {
+.header_nav a:hover {
   color: var(--accent-color);
 }
 
-/* Hero & Container Principal */
+.ice_cream {
+  color: var(--accent-color);
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+  flex-shrink: 0
+}
+
+.ice_cream svg {
+  height: 40px;
+  width: 40px;
+  fill: currentColor;
+}
 .menu_container {
   padding: 60px 20px;
 }
@@ -81,7 +94,8 @@ header {
   padding: 0 32px;
 }
 
-.menu_hero span {
+.cs_span {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: var(--accent-color);
   font-size: 14px;
   font-weight: 700;
@@ -89,11 +103,12 @@ header {
 }
 
 .menu_hero h2 {
+  color: #F6F3E7;
   font-size: 32px;
   margin: 10px 0;
 }
 
-.menu_hero .h2_span {
+.h2_span {
   color: var(--accent-color);
 }
 
@@ -161,8 +176,6 @@ header {
   transform: translateY(-4px);
   border-color: var(--accent-color);
 }
-
-/* Imagem cobrindo 100% do card */
 .card_bg_img {
   position: absolute;
   top: 0;
@@ -176,21 +189,6 @@ header {
 
 .card:hover .card_bg_img {
   transform: scale(1.05);
-}
-
-.card_overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to top, 
-    rgba(21, 16, 47, 0.95) 0%, 
-    rgba(21, 16, 47, 0.4) 50%, 
-    rgba(21, 16, 47, 0.1) 100%
-  );
-  z-index: 2;
 }
 
 .card_content {
@@ -208,7 +206,7 @@ header {
 }
 
 .card p { 
-  color: #d1c8e8; 
+  color: var(--accent-color); 
   font-size: 12px; 
   margin-bottom: 12px; 
 }
@@ -229,8 +227,8 @@ header {
   height: 32px;
   border-radius: 50%;
   border: none;
-  background: var(--accent-color);
-  color: #12102a;
+  background: #FFFFFFB3;
+  color: #15102F;
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease;
@@ -238,28 +236,7 @@ header {
 
 .card_price button:hover {
   transform: scale(1.1);
-  background-color: #fff;
-}
-
-footer {
-  width: 100%;
-  background-color: var(--primary-color);
-  margin-top: 40px;
-}
-
-.footer_container {
-  font-size: 12px;
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1.2fr 1fr auto auto;
-  gap: 30px;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 42px 6vw;
-}
-
-.footer_container p {
-  color: var(--tertiary-color);
+  background-color: var(--accent-color);
 }
 
 @media (max-width: 900px) {
@@ -267,13 +244,13 @@ footer {
     grid-template-columns: repeat(2, 1fr); 
   }
   .header_container {
-    flex-direction: column;
-    text-align: center;
     gap: 16px;
   }
-  .footer_container {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .header_nav {
+    display: none;
+  }
+  .ice_cream {
+    display: block;
   }
 }
 
